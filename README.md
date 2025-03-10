@@ -10,10 +10,10 @@ I used Copilot and ChatGPT in this assignment.
 
 Rubric Elements
 1. Basic Scene: (x)
-- >= 3 different Shapes (Cube, Sphere, Cylinder, Rectangular Prism)
+- at least 3 different Shapes (Cube, Sphere, Cylinder, Rectangular Prism)
 - Animated Sun
--Directional Light Added
--Perspective Camera Added
+- Directional Light Added
+- Perspective Camera Added
 2. Textured Shapes (x)
 3. Obj House (x)
 4. Camera Orbit Controls (x)
