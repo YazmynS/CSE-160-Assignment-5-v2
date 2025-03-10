@@ -25,4 +25,4 @@ Note 2: The spot light is on the kid. So look on the floor under him
 7. 20 Shapes (x)
 8. Extra 1 (Fog) (x)
 9. Extra 2 (Shadow) (x)
-10 Extra 3 (Billboards) (x)
+10. Extra 3 (Billboards) (x)
