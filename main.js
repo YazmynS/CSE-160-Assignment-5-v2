@@ -63,16 +63,6 @@ function main() {
         });   
     });
 
-    // Ground
-    const planeGeometry = new THREE.PlaneGeometry(10, 10);
-    const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.5 }); // Transparent to only show shadows
-    const ground = new THREE.Mesh(planeGeometry, planeMaterial);
-    ground.rotation.x = (-Math.PI / 2)+3; // Rotate flat
-    ground.position.y = -1;  // Adjust to match scene ground level
-    ground.receiveShadow = true;
-    scene.add(ground);
-    ground.receiveShadow = true; 
-        
     // Create Shapes
     const sun = createShapeInstance(scene, 'cube', 0xffcc00,
         { x: 2, y: 4, z: -1 }, 

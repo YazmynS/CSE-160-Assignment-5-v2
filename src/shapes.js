@@ -3,7 +3,7 @@ import * as THREE from 'three';
 export function createShapeInstance(scene, shapeType, color, position, size, texture = null) {
     let geometry;
     
-    // Define shape geometries based on the type
+    // Define shape geometry
     switch (shapeType) {
         case 'cube':
             geometry = new THREE.BoxGeometry(size.x, size.y, size.z);
@@ -13,9 +13,6 @@ export function createShapeInstance(scene, shapeType, color, position, size, tex
             break;
         case 'cylinder':
             geometry = new THREE.CylinderGeometry(size.radiusTop, size.radiusBottom, size.height, 32);
-            break;
-        case 'pyramid':
-            geometry = new THREE.CylinderGeometry(size.radiusTop, size.radiusBottom, size.height, size.radialSegments);
             break;
         case 'prism':
             geometry = new THREE.BoxGeometry(size.width, size.height, size.depth);

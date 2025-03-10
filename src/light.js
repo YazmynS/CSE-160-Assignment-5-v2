@@ -7,7 +7,7 @@ export function createLight(scene) {
 
     // Directional Light
     const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-    directionalLight.position.set(0, 5, 0); // Above the scene
+    directionalLight.position.set(0, 5, 0); 
     directionalLight.target.position.set(0, 0, 0);
     scene.add(directionalLight);
     scene.add(directionalLight.target);

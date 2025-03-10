@@ -1,23 +1,24 @@
 import * as THREE from 'three';
 
 export function createBillboard(scene, text, position) {
+    //Creater Canvas
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
 
-    // Set initial font size and measure text width
+    // Cretae font/text
     const fontSize = 32;
     context.font = `${fontSize}px Arial`;
     const textWidth = context.measureText(text).width;
 
-    // Adjust canvas size dynamically
-    canvas.width = textWidth + 20; // Add some padding
+    // Adjust size dynamically w/ padding
+    canvas.width = textWidth + 20; 
     canvas.height = fontSize + 20;
 
-    // Redraw background
-    context.fillStyle = 'rgb(205, 11, 195)'; // Semi-transparent background
+    // Get Background Color
+    context.fillStyle = 'rgb(205, 11, 195)';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Redraw text centered
+    // Get Text Information
     context.fillStyle = 'white';
     context.font = `${fontSize}px Arial`;
     context.textAlign = 'center';
@@ -28,14 +29,12 @@ export function createBillboard(scene, text, position) {
     const texture = new THREE.CanvasTexture(canvas);
     const material = new THREE.SpriteMaterial({ map: texture });
 
-    // Disable fog for the billboard
+    // Remove Fog
     material.fog = false;
 
-    // Create sprite (billboard effect)
+    // Create Billboard
     const billboard = new THREE.Sprite(material);
     billboard.position.set(position.x, position.y, position.z);
-
-    // Scale the billboard based on text size
     billboard.scale.set(textWidth / 80, fontSize / 40, 1);
 
     scene.add(billboard);

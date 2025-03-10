@@ -2,11 +2,11 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export function createCamera(renderer) {
+    //Create Camera
     const fov = 75;
-    const aspect = 2; // Canvas default
+    const aspect = 2;
     const near = 0.1;
     const far = 10;
-    
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     camera.position.z = 2;
 
